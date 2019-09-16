@@ -1,0 +1,8 @@
+/*Navbar*/
+
+#navbar {
+    height: 80px;
+    background-color: pink;
+    color: gray;
+    text-transform: uppercase;
+}
