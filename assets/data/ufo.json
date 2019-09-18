@@ -2,22 +2,37 @@
   {
     "city": "New York",
     "state": "NY",
-    "date": "01/27/1986",
+    "country": "USA",
+    "date": "01/02/1986",
     "shape": "changing",
-    "duration": 160
+    "duration": 160,
+    "events": 5
   },
   {
     "city": "Denver",
     "state": "CO",
-    "date": "01/26/1986",
+    "country": "USA",
+    "date": "02/03/1986",
     "shape": "disc",
-    "duration": 20
+    "duration": 20,
+    "events": 3
   },
   {
-    "city": "Florida",
-    "state": "OR",
-    "date": "01/28/1986",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "USA",
+    "date": "03/04/1986",
     "shape": "ball",
-    "duration": 60
+    "duration": 60,
+    "events": 6
+  },
+  {
+    "city": "Dublin",
+    "state": "XX",
+    "country": "Ireland",
+    "date": "12/04/1986",
+    "shape": "ball",
+    "duration": 60,
+    "events": 2
   }
 ]
