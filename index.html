@@ -7,51 +7,100 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css /">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>UFO Data</title>
 </head>
 
 <body>
-    <div id="container">
-        <nav id="navbar">
-            <ul>
-                <li id="logo" href="">Home</li>
-                <li id="menu1" href="">How To Use</li>
-                <li id="menu2" href="">Summary</li>
-                <li id="menu3" href="">Resources</li>
-            </ul>
-        </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <a class="navbar-brand" href="index.html"><i class="fa fa-reddit-alien fa-2x"></i></a>
+        <ul class=navbar-nav>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">How To Use</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Summary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Resources</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
 
-        <h1>UFO Sightings</h1>
-
-        <div>
-            <h3>Frequency of UFO sightings</h3>
-            <div id="freq"></div>
+        <div class="container-blocks text-center">
+            <h1>UFO Sightings</h1>
+            <h4>The Truth <i>isn't</i> out there. It's in here...</h4>
+            <button class="accordion">Learn More</button>
+            <div class="panel">
+                <p>This page presents a snapshot of the accumulated data across one year (Sept 2016 - Sept 2017) as gathered by the NUFORC (National UFO Reporting Center).</p>
+                <p>The charts provided herein lean on the data acquired and can be crossfiltered accordingly to provide the user with an understanding of the behaviour, pattern, location and frequency of UFO sightings for the aforementioned year worldwide.</p>
+                </p>
+            </div>
         </div>
-        <div>
-            <h3>Sightings by month</h3>
-            <div id="monthly"></div>
+        <div class="container-blocks row text-center">
+            <div class="col-xs-12 col-md-4">
+                <h3>Sightings by Continent:</h3>
+                <p class="section-paragraph">The most common location for UFO sightings is in the USA (97% of the data from the NUFRC).</p>
+                <div id="continent"></div>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <h3>UFO sightings by Date:</h3>
+                <div id="continent-selector"></div>
+                <div id="line-chart"></div>
+            </div>
         </div>
-        <div>
-            <h3>Sightings by country</h3>
-            <div id="country"></div>
+        <div class="container-blocks row text-center">
+            <div class="col-xs-12">
+                <h3>Sightings by State</h3>
+                <p class="section-paragraph">The most reported sightings in the US for our chosen timeframe occur in California.
+                <p class="section-paragraph">N.B. It should be noted that the state listed as 'XX' denotes a location outside of the US, and can be drilled deeper into for detail in the 'Sightings by Continent' chart.
+                <div id="state"></div>
+            </div>
         </div>
-        <div>
-            <h3>UFO Shapes</h3>
-            <div id="shapes"></div>
+        <div class="container-blocks row text-center">
+            <div class="col-xs-12 col-md-6">
+                <h3> Duration of UFO sightings: </h3>
+                <p class="section-paragraph">The most frequent sighting of UFOs lasts for less than a minute.</p>
+                <div id="duration"></div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h3> Shape of UFOs spotted: </h3>
+                <p class="section-paragraph">The most common UFO shape observed is as a light form.</p>
+                <div id="shapes"></div>
+            </div>
         </div>
-        <div>
-            <h3>Scatter Plot</h3>
-            <div id="duration"></div>
-        </div>
+        <div class="container-blocks row text-center">
+            <h3> Summary: </h3>
+            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A perspiciatis laboriosam, expedita aperiam unde necessitatibus debitis, aliquam quae incidunt non. Sapiente illum ea mollitia, dolorum quisquam consequatur deleniti ex fuga vero tenetur eius nihil ratione. Voluptas ducimus, adipisci sapiente! Error.</p>
+        <div class="container-blocks row text-center">
+            <h3> Additional Resources: </h3>
+            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quisquam architecto aliquam quis illum adipisci assumenda magni ducimus neque animi.</p>
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div id="footer-details">
+                <a class="navbar-brand" href="index.html">Back to Top</a>
+                <div id="footer-refresh-button">
+                    <button type="submit" class="btn btn-success" onClick="refreshPage()">Refresh Charts</button>
+                </div>
+                <p class="footer-section-paragraph">Hover or Click on Graphs and Charts to select data for analysis</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 

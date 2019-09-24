@@ -1,8 +1,64 @@
-/*Navbar*/
+h3 {
+    align-items: center;
+}
 
-#navbar {
-    height: 80px;
-    background-color: pink;
-    color: gray;
-    text-transform: uppercase;
+.container-blocks {
+    padding: 20px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #2C3E50;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+.footer-section-paragraph {
+    color: #FFFFFF;
+    float: right;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+/* Accordion */
+
+.accordion {
+  background-color: #1ae851;
+  color: #444;
+  cursor: pointer;
+  padding: 16px;
+  width: 50%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Button background color when hovered and/or clicked */
+.active, .accordion:hover {
+  background-color: #e8841a;
+}
+
+/* Accordion panel. Note: hidden by default */
+
+.panel {
+  padding: 0 18px;
+  background-color: #f9fad4;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*Rotate state on x-axis to fit*/
+
+#state .axis.x text {
+    transform: rotate(-45deg) translate(-20px, 0px);
+}
+
+/* Make text smaller for x-axis on calendar*/
+
+#line-chart .axis.x text {
+    transform: rotate(-45deg) translate(-20px, 0px);
 }
