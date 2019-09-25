@@ -18,6 +18,8 @@ function makeGraphs(error, ufoData) {
         d.date = parseDate(d.date);
     });
     
+    
+    
     show_continent_selector(ndx);
     // show_continent_sightings(ndx);
     show_monthly_sightings(ndx);
@@ -41,7 +43,7 @@ function show_continent_selector(ndx) {
         .group(group);
 }
 
-// Composite chart data
+// Composite chart data - HAVEN'T GOT THIS WORKING SO REPLACED IT WITH LINE GRAPH IMMEDIATELY BELOW
     
 function show_continent_sightings(ndx) {
     let date_dim = ndx.dimension(dc.pluck('date'));
@@ -123,7 +125,31 @@ function show_continent_sightings(ndx) {
 
 }
     
+// Line Chart Showing Dates and Number of Sightings
 
+function show_monthly_sightings(ndx) {
+    let date_dim = ndx.dimension(dc.pluck('date'));
+    let date_group = date_dim.group();
+    
+    let minDate = date_dim.bottom(1)[0].date;
+    let maxDate = date_dim.top(1)[0].date;
+
+    dc.lineChart("#line-chart")
+        .width(800)
+        .height(300)
+        .margins({top: 20, right: 50, bottom: 30, left: 50 })
+        .useViewBoxResizing(true)
+        .dimension(date_dim)
+        .group(date_group)
+        .transitionDuration(500)
+        .brushOn(false)
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .xAxisLabel("Month")
+        .yAxis().ticks(6);
+
+}
+
+// Bar chart showing sightings by US state
     
 function show_state_sightings(ndx) {
     let state_dim = ndx.dimension(dc.pluck('state'));
@@ -134,6 +160,7 @@ function show_state_sightings(ndx) {
         .width(1200)
         .height(400)
         .margins({ top: 10, right: 60, bottom: 100, left: 60 })
+        .useViewBoxResizing(true)
         .dimension(state_dim)
         .group(state_group)
         .transitionDuration(500)
@@ -209,6 +236,7 @@ function show_duration(ndx) {
     dc.pieChart("#duration")
         .height(400)
         .radius(500)
+        .useViewBoxResizing(true)
         .innerRadius(60)
         .dimension(duration_dim)
         .group(duration_group)
@@ -223,28 +251,6 @@ function show_duration(ndx) {
         
 }
 
-// Line Chart Data 
-
-function show_monthly_sightings(ndx) {
-    let date_dim = ndx.dimension(dc.pluck('date'));
-    let date_group = date_dim.group();
-    
-    let minDate = date_dim.bottom(1)[0].date;
-    let maxDate = date_dim.top(1)[0].date;
-
-    dc.lineChart("#line-chart")
-        .width(800)
-        .height(300)
-        .margins({top: 20, right: 50, bottom: 30, left: 50 })
-        .dimension(date_dim)
-        .group(date_group)
-        .transitionDuration(500)
-        .brushOn(false)
-        .x(d3.time.scale().domain([minDate, maxDate]))
-        .xAxisLabel("Month")
-        .yAxis().ticks(6);
-
-}
 
 // Scatter Plot 
 
@@ -273,7 +279,7 @@ function show_monthly_sightings(ndx) {
 //         .xAxisLabel("Month");
 // }
 
-// Accordion
+// Accordion for Read More (top of page)
 
 var acc = document.getElementsByClassName("accordion");
 var i;
