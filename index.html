@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css /">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.3/dc.min.css" type="text/css /">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -45,13 +45,8 @@
             </div>
         </div>
         <div class="container-blocks row text-center">
-            <div class="col-xs-12 col-md-4">
-                <h3>Sightings by Continent:</h3>
-                <p class="section-paragraph">The most common location for UFO sightings is in the USA (97% of the data from the NUFRC).</p>
-                <div id="continent"></div>
-            </div>
-            <div class="col-xs-12 col-md-8">
-                <h3>UFO sightings by Date:</h3>
+            <div class="col-12">
+                <h3>UFO sightings by Continent:</h3>
                 <div id="continent-selector"></div>
                 <div id="line-chart"></div>
             </div>
@@ -76,13 +71,33 @@
                 <div id="shapes"></div>
             </div>
         </div>
-        <div class="container-blocks row text-center">
+        <div class="container-blocks row">
             <h3> Summary: </h3>
             <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A perspiciatis laboriosam, expedita aperiam unde necessitatibus debitis, aliquam quae incidunt non. Sapiente illum ea mollitia, dolorum quisquam consequatur deleniti ex fuga vero tenetur
-                eius nihil ratione. Voluptas ducimus, adipisci sapiente! Error.</p>
-            <div class="container-blocks row text-center">
-                <h3> Additional Resources: </h3>
-                <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quisquam architecto aliquam quis illum adipisci assumenda magni ducimus neque animi.</p>
+                eius nihil ratione. Voluptas ducimus, adipisci sapiente!</p>
+        </div>
+        <div class="container-blocks row">
+            <h3> Additional Resources: </h3>
+            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quisquam architecto aliquam quis illum adipisci assumenda magni ducimus neque animi.</p>
+            <h5>Table showing UFO activity in chrononological order from Aug 2016 - 2017</h5>
+            <table id="ufo-data-table" class="table table-bordered">
+                <thead>
+                    <tr class="header">
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Date</th>
+                        <th>Shape</th>
+                        <th>Duration</th>
+                        <th>Time Range</th>
+                        <th>Country</th>
+                        <th>Continent</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="paging">
+                Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>
+                <input id="last" class="btn" type="Button" value="Last" />
+                <input id="next" class="btn" type="button" value="Next" />
             </div>
         </div>
     </div>

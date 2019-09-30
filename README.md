@@ -122,12 +122,12 @@ Used for feasibility testing, discussion with mentor, brainstorming ideas and ut
 
 | Number | Issue            | Resolution   |
 |--------|------------------|--------------|
-|  1  | Overlap w/ pie and legend   |  |
-|  2  | Line chart not rendering  |  |
-|  3  | Responsive design  |   |
+|  1  | Overlap w/ pie and legend   | Removed chart (mentor discussion suggested it was a rather redundant item in the dash |
+|  2  | Line chart showing fill between first and last dates  | Added style to remove fill and define line |
+|  3  | Responsive design  | Introduced Viewbox resizing and bootstrap containers  |
 |  4  | Reset button missing  |   |
 |  5  | Summary  |   |
-|  6  | Addtional Resources  |  |
+|  6  | Additional Resources  |  |
 |  7  | Footer  |   |
 |  8  | Drawn labels 'shape chart'  |  |
 |  9  | Navbar section connect |  |

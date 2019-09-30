@@ -21,10 +21,9 @@ function makeGraphs(error, ufoData) {
     
     
     show_continent_selector(ndx);
-    // show_continent_sightings(ndx);
     show_monthly_sightings(ndx);
     show_state_sightings(ndx);
-    show_continent(ndx);
+    // show_continent(ndx);
     show_duration(ndx);
     show_shapes(ndx);
     
@@ -42,90 +41,9 @@ function show_continent_selector(ndx) {
         .dimension(dim)
         .group(group);
 }
-
-// Composite chart data - HAVEN'T GOT THIS WORKING SO REPLACED IT WITH LINE GRAPH IMMEDIATELY BELOW
-    
-function show_continent_sightings(ndx) {
-    let date_dim = ndx.dimension(dc.pluck('date'));
-    
-    let minDate = date_dim.bottom(1)[0].date;
-    let maxDate = date_dim.top(1)[0].date;
-
-    function sightings_by_continent(continent) {
-        return function(d) {
-            if (d.continent === continent) {
-                return d.duration;
-            }
-            else {
-                return 0;
-            }
-        };
-    }
-
-    let NorthAmericaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('North America'));
-
-    let SouthAmericaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('South America'));
-
-    let EuropeSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('Europe'));
-
-    let AsiaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('Asia'));
-
-    let AfricaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('Africa'));
-
-    let OceaniaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('Oceania'));
-    
-    let SeaSightingsByMonth = date_dim.group().reduceSum(sightings_by_continent('Sea'));
-    
-    let TotalSightingsByMonth = date_dim.group();
-
-    let compositeChart = dc.compositeChart('#composite-chart');
-    
-
-    compositeChart
-        .width(1200)
-        .height(500)
-        .useViewBoxResizing(true)
-        .dimension(date_dim)
-        .x(d3.scale.linear().domain([minDate, maxDate]))
-        .xAxisLabel("Month")
-        .yAxisLabel("Sightings")
-        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-        .renderHorizontalGridLines(true)
-
-        .compose([
-            dc.lineChart(compositeChart)
-            .colors('red')
-            .group(NorthAmericaSightingsByMonth, 'North America'),
-            dc.lineChart(compositeChart)
-            .colors('green')
-            .group(EuropeSightingsByMonth, 'Europe'),
-            dc.lineChart(compositeChart)
-            .colors('gold')
-            .group(OceaniaSightingsByMonth, 'Oceania'),
-            dc.lineChart(compositeChart)
-            .colors('black')
-            .group(AsiaSightingsByMonth, 'Asia'),
-            dc.lineChart(compositeChart)
-            .colors('blue')
-            .group(SouthAmericaSightingsByMonth, 'South America'),
-            dc.lineChart(compositeChart)
-            .colors('purple')
-            .group(SeaSightingsByMonth, 'Sea'),
-            dc.lineChart(compositeChart)
-            .colors('yellow')
-            .group(AfricaSightingsByMonth, 'Africa'),
-            dc.lineChart(compositeChart)
-            .colors('orange'),
-
-            dc.lineChart(compositeChart)
-            .dashStyle([3, ])
-            .colors('blue')
-            .group(TotalSightingsByMonth, 'TOTAL')
-        ]);
-
-}
     
 // Line Chart Showing Dates and Number of Sightings
+
 
 function show_monthly_sightings(ndx) {
     let date_dim = ndx.dimension(dc.pluck('date'));
@@ -135,16 +53,16 @@ function show_monthly_sightings(ndx) {
     let maxDate = date_dim.top(1)[0].date;
 
     dc.lineChart("#line-chart")
-        .width(800)
+        .width(1200)
         .height(300)
-        .margins({top: 20, right: 50, bottom: 30, left: 50 })
+        .margins({top: 30, right: 50, bottom: 40, left: 50 })
         .useViewBoxResizing(true)
         .dimension(date_dim)
         .group(date_group)
         .transitionDuration(500)
         .brushOn(false)
         .x(d3.time.scale().domain([minDate, maxDate]))
-        .xAxisLabel("Month")
+        .yAxisLabel("Number of Sightings")
         .yAxis().ticks(6);
 
 }
@@ -167,6 +85,7 @@ function show_state_sightings(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("US States")
+        .yAxisLabel("Number of Sightings")
         .renderHorizontalGridLines(true)
         .title(function (d) {
                 if (d.value === 1) {

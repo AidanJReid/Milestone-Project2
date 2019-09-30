@@ -39,14 +39,32 @@ h3 {
   transition: max-height 0.2s ease-out;
 }
 
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 /*Rotate state on x-axis to fit*/
 
 #state .axis.x text {
     transform: rotate(-45deg) translate(-20px, 0px);
 }
 
-/* Make text smaller for x-axis on calendar*/
+/* Make text tilt for x-axis on calendar*/
 
 #line-chart .axis.x text {
-    transform: rotate(-45deg) translate(-20px, 0px);
+    transform: rotate(-45deg) translate(-40px, 0px);
+}
+
+.line {
+    fill: none;
+    stroke: green;
+    stroke-width: 1px;
 }
