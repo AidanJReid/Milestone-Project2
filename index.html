@@ -36,50 +36,61 @@
 
         <div class="container-blocks text-center">
             <h1>UFO Sightings</h1>
-            <h4>The Truth <i>isn't</i> out there. It's in here...</h4>
+            <h3>The Truth <i>isn't</i> out there. It's in here...</h3>
             <button class="accordion">Learn More</button>
             <div class="panel">
-                <p>This page presents a snapshot of the accumulated data across one year (Sept 2016 - Sept 2017) as gathered by the NUFORC (National UFO Reporting Center).</p>
-                <p>The charts provided herein lean on the data acquired and can be crossfiltered accordingly to provide the user with an understanding of the behaviour, pattern, location and frequency of UFO sightings for the aforementioned year worldwide.</p>
-                </p>
+                <p>This page presents a snapshot of the accumulated UFO data across one year (Sept 2016 - Sept 2017) as gathered by the NUFORC (National UFO Reporting Center).</p>
+                <p>The charts provided can be crossfiltered accordingly to provide the user with an understanding of the behaviour, pattern, location and frequency of UFO sightings for the aforementioned year worldwide.</p>
+                <hr>
+                <p>The primary selectors recommended for filtering are by 'Continent' (Chart 1 - line graph), and 'State' (Chart 2 - bar chart).</p>
             </div>
         </div>
         <div class="container-blocks row text-center">
             <div class="col-12">
-                <h3>UFO sightings by Continent:</h3>
+                <h3 class="chart-headings">UFO sightings by Continent:</h3>
+                <h5>Total number of (global) sightings tracked against date.</h5>
+                <p class="section-paragraph">Users can drill into the menu to reveal the number of sightings by continent.</p>
                 <div id="continent-selector"></div>
                 <div id="line-chart"></div>
             </div>
         </div>
         <div class="container-blocks row text-center">
-            <div class="col-xs-12">
-                <h3>Sightings by State</h3>
-                <p class="section-paragraph">The most reported sightings in the US for our chosen timeframe occur in California.
-                    <p class="section-paragraph">N.B. It should be noted that the state listed as 'XX' denotes a location outside of the US, and can be drilled deeper into for detail in the 'Sightings by Continent' chart.
-                        <div id="state"></div>
+            <div class="col-12">
+                <h3 class="chart-headings">Sightings by State</h3>
+                <h5>Total number of reported sightings in the US by state</h5>
+                <p class="section-paragraph">N.B. The state listed as 'XX' denotes a location outside of the US, and the respective countries are revealed by clicking on the the bar and the following chart ('Sightings by Country') observed.</p>
+                <div id="state-selector"></div>
+                <div id="state"></div>
+            </div>
+        </div>
+        <div class="container-blocks row text-center">
+            <div class="col-12">
+                <h3 class="chart-headings">Non-US Sightings</h3>
+                <h5>Continential Sightings by frequency</h5>
+                <div id="non-us"></div>
             </div>
         </div>
         <div class="container-blocks row text-center">
             <div class="col-xs-12 col-md-6">
-                <h3>Duration of UFO sightings: </h3>
+                <h3 class="chart-headings">Duration of UFO sightings: </h3>
                 <p class="section-paragraph">The most frequent sighting of UFOs lasts for less than a minute.</p>
                 <div id="duration"></div>
             </div>
             <div class="col-xs-12 col-md-6">
-                <h3>Shape of UFOs spotted: </h3>
+                <h3 class="chart-headings">Shape of UFOs spotted: </h3>
                 <p class="section-paragraph">The most common UFO shape observed is as a light form.</p>
                 <div id="shapes"></div>
             </div>
         </div>
         <div class="container-blocks row">
-            <h3> Summary: </h3>
-            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A perspiciatis laboriosam, expedita aperiam unde necessitatibus debitis, aliquam quae incidunt non. Sapiente illum ea mollitia, dolorum quisquam consequatur deleniti ex fuga vero tenetur
-                eius nihil ratione. Voluptas ducimus, adipisci sapiente!</p>
+            <h3>Summary: </h3>
+            <p id="summary-paragraph">97% of reported sightings occurred in the continent of North America. The US state of California reported the most number of sightings (505). The majority of all sightings ~ 32% lasted a minute or less with the most observed 'shape' being
+                a light source.</p>
         </div>
         <div class="container-blocks row">
-            <h3> Additional Resources: </h3>
+            <h3>Additional Resources: </h3>
             <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quisquam architecto aliquam quis illum adipisci assumenda magni ducimus neque animi.</p>
-            <h5>Table showing UFO activity in chrononological order from Aug 2016 - 2017</h5>
+            <h5>Table showing UFO activity in chrononological order from Aug 2016 - Aug 2017</h5>
             <table id="ufo-data-table" class="table table-bordered">
                 <thead>
                     <tr class="header">

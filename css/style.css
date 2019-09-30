@@ -1,4 +1,6 @@
-h3 {
+/*Chart Headings*/
+
+.chart-headings {
     align-items: center;
 }
 
@@ -8,7 +10,11 @@ h3 {
 
 /* footer */
 
+/*Exceptional styling*/
 
+#summary-paragraph {
+  text-align: left;
+}
 
 /* Accordion */
 

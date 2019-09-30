@@ -22,8 +22,9 @@ function makeGraphs(error, ufoData) {
     
     show_continent_selector(ndx);
     show_monthly_sightings(ndx);
+    show_state_selector(ndx);
     show_state_sightings(ndx);
-    // show_continent(ndx);
+    show_continent(ndx);
     show_duration(ndx);
     show_shapes(ndx);
     
@@ -67,6 +68,17 @@ function show_monthly_sightings(ndx) {
 
 }
 
+// Select menu showing state selector
+
+function show_state_selector(ndx) {
+    let dim = ndx.dimension(dc.pluck('state'));
+    let group = dim.group();
+
+    dc.selectMenu("#state-selector")
+        .dimension(dim)
+        .group(group);
+}
+
 // Bar chart showing sightings by US state
     
 function show_state_sightings(ndx) {
@@ -99,22 +111,19 @@ function show_state_sightings(ndx) {
 
 }
         
-// Pie Chart (country) data
+// Row Chart (continent) data
 
 function show_continent(ndx) {
     
     let continent_dim = ndx.dimension(dc.pluck('continent'));
     let continent_group = continent_dim.group();
     
-    dc.pieChart("#continent")
-        .height(200)
+    dc.rowChart("#non-us")
+        .height(500)
+        .width(1200)
         .dimension(continent_dim)
         .group(continent_group)
-        .transitionDuration(1500)
         .useViewBoxResizing(true)
-        .drawPaths(true)
-        .minAngleForLabel(0.25)
-        .legend(dc.legend().x(0).y(0).itemHeight(15).gap(6))
         .title(function (d) {
                 if (d.value === 1) {
                     return d.value + " sightings are in " + d.key;
@@ -135,11 +144,10 @@ function show_shapes(ndx) {
         .height(400)
         .radius(500)
         .useViewBoxResizing(true)
-        .innerRadius(60)
         .externalRadiusPadding(10)
-        .minAngleForLabel(0.25)
+        .externalLabels(40)
         .drawPaths(true)
-        .externalLabels(10)
+        .minAngleForLabel(0.2)
         .dimension(shape_dim)
         .group(shape_group)
         .transitionDuration(1500);
@@ -169,34 +177,6 @@ function show_duration(ndx) {
             });
         
 }
-
-
-// Scatter Plot 
-
-// function show_duration_of_sightings(ndx) {
-    
-//     var duration_dim = ndx.dimension(function (d) {
-//         return [d.date, d.duration];
-//     });
-    
-//     var duration_group = duration_dim.group();
-//     var date_dim = ndx.dimension(dc.pluck('date'));
-    
-//     var minDate = date_dim.bottom(1)[0].date;
-//     var maxDate = date_dim.top(1)[0].date;
-    
-//     dc.scatterPlot("#duration")
-//         .width(700)
-//         .height(400)
-//         .dimension(duration_dim)
-//         .group(duration_group)
-//         .x(d3.time.scale().domain([minDate, maxDate]))
-//         .brushOn(false)
-//         .symbolSize(8)
-//         .clipPadding(10)
-//         .yAxisLabel("Duration of Sighting")
-//         .xAxisLabel("Month");
-// }
 
 // Accordion for Read More (top of page)
 
