@@ -16,6 +16,15 @@
   text-align: left;
 }
 
+/* Navbar */
+
+
+/* Container Blocks Styling */
+
+.container-blocks {
+  border: 1px solid gray;
+}
+
 /* Accordion */
 
 .accordion {

@@ -55,7 +55,7 @@ function show_monthly_sightings(ndx) {
 
     dc.lineChart("#line-chart")
         .width(1200)
-        .height(300)
+        .height(400)
         .margins({top: 30, right: 50, bottom: 40, left: 50 })
         .useViewBoxResizing(true)
         .dimension(date_dim)

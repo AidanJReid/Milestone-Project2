@@ -10,31 +10,34 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <title>UFO Data</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <a class="navbar-brand" href="index.html"><i class="fa fa-reddit-alien fa-2x"></i></a>
-        <ul class=navbar-nav>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">How To Use</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Summary</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Resources</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">HOME</a>
+        <button class="navbar-toggler justify-content-center" type="button" data-toggle="collapse" data-target="#navvy">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navvy">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#summary">Summary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resources">Resources</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
 
-        <div class="container-blocks text-center">
+        <div class="container text-center">
             <h1>UFO Sightings</h1>
             <h3>The Truth <i>isn't</i> out there. It's in here...</h3>
             <button class="accordion">Learn More</button>
@@ -83,51 +86,64 @@
             </div>
         </div>
         <div class="container-blocks row">
-            <h3>Summary: </h3>
-            <p id="summary-paragraph">97% of reported sightings occurred in the continent of North America. The US state of California reported the most number of sightings (505). The majority of all sightings ~ 32% lasted a minute or less with the most observed 'shape' being
-                a light source.</p>
+            <div id="summary">
+                <h3>Summary</h3>
+                <p id="summary-paragraph">Based on the charts and the sample size for the 12 month period, we can conclude:</p>
+                <ul>
+                    <li>97% of reported sightings occurred in the continent of North America.</li>
+                    <li>The US state of California reported the most number of sightings (505).</li>
+                    <li>The majority of all sightings ~ 32% lasted a minute or less with the most observed 'shape' being a light source.</li>
+                </ul>
+            </div>
         </div>
         <div class="container-blocks row">
-            <h3>Additional Resources: </h3>
-            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quisquam architecto aliquam quis illum adipisci assumenda magni ducimus neque animi.</p>
-            <h5>Table showing UFO activity in chrononological order from Aug 2016 - Aug 2017</h5>
-            <table id="ufo-data-table" class="table table-bordered">
-                <thead>
-                    <tr class="header">
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Date</th>
-                        <th>Shape</th>
-                        <th>Duration</th>
-                        <th>Time Range</th>
-                        <th>Country</th>
-                        <th>Continent</th>
-                    </tr>
-                </thead>
-            </table>
-            <div id="paging">
-                Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>
-                <input id="last" class="btn" type="Button" value="Last" />
-                <input id="next" class="btn" type="button" value="Next" />
+            <div id="data">
+                <h3>Data</h3>
+                <h5>Table showing UFO activity in chrononological order from Aug 2016 - Aug 2017</h5>
+                <table id="ufo-data-table" class="table table-bordered">
+                    <thead>
+                        <tr class="header">
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Date</th>
+                            <th>Shape</th>
+                            <th>Duration</th>
+                            <th>Time Range</th>
+                            <th>Country</th>
+                            <th>Continent</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div id="paging">
+                    Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>
+                    <input id="last" class="btn" type="Button" value="Last" />
+                    <input id="next" class="btn" type="button" value="Next" />
+                </div>
             </div>
         </div>
-    </div>
-    <footer class="container-fluid bg-dark text-center">
-        <div class="row">
-            <div class="col-sm-6 foot-col">
-                <h6>Aidan Reid</h6>
-            </div>
-            <div class="col-sm-6 foot-col">
-                <button>Refresh Chart</button>
+        <div class="container-blocks row">
+            <div id="resources">
+                <h3>Additional Resources</h3>
+                <p>The original data used in this dashboard is sourced from <a href="https://data.world/timothyrenner/ufo-sightings">Data.World</a>.</p>
+                <p>Further information about UFO sightings and how to report them can be found at the <a href="http://www.nuforc.org/">NUFORC</a> site.</p>
             </div>
         </div>
-    </footer>
+        <footer class="container-fluid bg-dark text-center">
+            <div class="row">
+                <div class="col-sm-6 foot-col">
+                    <h6>Aidan Reid</h6>
+                </div>
+                <div class="col-sm-6 foot-col">
+                    <button>Refresh Chart</button>
+                </div>
+            </div>
+        </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>
