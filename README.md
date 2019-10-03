@@ -5,7 +5,7 @@ It is designed to relay and visually present general behavioural patterns/shapes
 
 ## UX
 
-![responsive.jpg](/images/responsive.jpg)
+![Responsiveness Test](/assets/images/responsive.jpg)
 
 This site is for UFO enthusiasts, those with an interest in science-fiction and amateur astronomers and sky-gazers.
 The site will primarily be of interest more to a US audience given the high incidence of UFO sightings recorded in the continent of North America.
@@ -21,8 +21,8 @@ The site will primarily be of interest more to a US audience given the high inci
 Initially I was going to display a composite graph near the top of the page, but decided against it because I felt that the parameters
 I would use to display various lines (continents) lacked 'punch' given how few sightings occurred outside of North America.
 
-![wireframe1.png](/images/snip1.png)
-![wireframe1.png](/images/snip2.png)
+![snip1.jpg](assets/images/snip1.jpg)
+![snip1.jpg](assets/images/snip2.jpg)
 
 
 
