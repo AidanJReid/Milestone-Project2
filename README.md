@@ -31,30 +31,37 @@ I would use to display various lines (continents) lacked 'punch' given how few s
 ### Existing features
 
 ##### Navbar
-* Bootstrap code was used with Font Awesome for the 'Alien' icon.
+* Bootswatch theme was used for navbar styling 
 
-##### Introductory text/Read More
+##### Accordion/Read More
 * Clicking the button reveals a collapsible accordion of text, informing the user of the purpose and source of the content for the displayed charts.
 The effect was achieved from [W3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp)
 
-##### Sightings by Continent pie chart
-* Displays all the sightings in the aforementioned year by continent. Users can view the legend to quickly select a territory, 
-and click on the legend to see which continent has the most sightings.
+##### UFO Sightings by Date line chart
+* Displays all the sightings in the aforementioned year. Can be filtered by continent by clicking the select menu.
+* Reset button configured to enhance user experience.
 
-##### UFO Sightings by Date line graph
-* Shows sightings as charted against the time period of one year. A select menu is presented which can be drilled into by choosing a continent.
-* Alternatively, by clicking on a section of the previous pie chart, the results will be reflected in this particular line graph.
+##### UFO Sightings row continent chart
+* Shows number of sightings as broken down by continent. Individual rows are interactive, can be clicked and resulting impact seen on other charts.
 
 ##### Sightings by State bar chart
-* Visually representing all 52 states and the number of sightings therein.
-* This includes a 53rd state (XX), which I denote in the accompanying text, and accounts for sightings outside of North America.
+* Visually representing all 52 states and the number of sightings.
+* This includes a 53rd state (XX), which I denote in the accompanying text, and accounts for sightings outside of the recognised US states.
+* Reset button provided to improve user experience.
+* Select menu which gives user ability to toggle between States. Alternatively the respective bar(s) can be selected.
 
+##### Duration of UFO Sighings | Shapes of UFOs spotted pie charts
+* Segment(s) of pie charts are interactive impacting on readability of subsequent charts. 
+* Hovering over segments will also reveal data.
+
+##### Summary | Additional Resources sections
+* Simple HTML & CSS used.
+* These sections are connected to the nav bar where users can quickly navigate to the secton in question.
 
 ### Features Left to Implement
 
 Given the high density of UFO sightings in North America, I felt that a great addition to this dashboard would be a choropleth map.
-At this stage in my learning, I feel that it would be a considerable task and probably beyond the scope of what is required for this project.
-Nevertheless, it is my intention to create this in the near-future, colour coding US states with a drill down effect that can present a powerful picture of high-frequency sightings.
+It is my intention to create this in the near-future, colour coding US states with a drill down effect that can present a powerful picture of high-frequency sightings.
 
 
 ## Technologies Used
@@ -68,7 +75,7 @@ This code was used to add style to the HTML specifications. CSS changes were mad
 and feel of the site. While the background color is mostly white, I played around with different colors on the charts and toggle areas.
 
 #### Bootswatch
-Used as primary skin for buttons and nav bar styling.
+Build on the theme of Bootstrap which I used as primary skin for buttons, theme and nav bar styling.
 
 ##### JavaScript 
 JS was used to queue my charts, reset buttons and created functionality on the page.
@@ -80,10 +87,10 @@ Used to provide interactivity between charts (line, bar, pie) enabling and impro
 Used to connect chart data together to make the charts with the help of HTML ids.
 
 ##### DC
-
+Library used for crossfilter.
 
 ##### jQuery
-
+Used for the hamburger drop down menu on mobile.
 
 ##### Data.world
 The original dataset used was by Tim Renner at [Data.World](https://data.world/timothyrenner/ufo-sightings).
@@ -98,13 +105,10 @@ Dealing with a relatively large dataset and various inconsistencies in certain f
 I used Cloud 9 of AWS Educate, Cloud 9 to create this project which enabled me to connect and push to Github when needed.
 
 ##### GitHub
-
+Used to host this particualr project.
 
 ##### Balsamiq
 Used for feasibility testing, discussion with mentor, brainstorming ideas and utlimately to create mockups of the project.
-
-
-##### Bootstrap 4
 
 
 ## Testing
@@ -164,3 +168,4 @@ The following steps were taken:
 * Inspiration from [Rob Simons](https://robsimons1.github.io/global-white-shark-attack-dashboard/) - pie chart ideas and layout
 * Inspiration from [Aileen Donegan](https://adonegan.github.io/milestone2-dashboard/stats.html) - general layout and a kick-ass README!
 * Inspiration from [Dano5324](https://github.com/dano5342/LotRDashboard) - namely the x-axis value tilt for my 52 states.
+* Thanks to my mentor Brian Macharia for his helpful advice and support as ever!
