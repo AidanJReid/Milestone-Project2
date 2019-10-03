@@ -18,8 +18,6 @@ function makeGraphs(error, ufoData) {
         d.date = parseDate(d.date);
     });
     
-    
-    
     show_continent_selector(ndx);
     show_monthly_sightings(ndx);
     show_state_selector(ndx);
@@ -28,11 +26,10 @@ function makeGraphs(error, ufoData) {
     show_duration(ndx);
     show_shapes(ndx);
     
-    
     dc.renderAll();
 }
 
-// Continent Selector
+// Continent Selector - shows all available continents
 
 function show_continent_selector(ndx) {
     let dim = ndx.dimension(dc.pluck('continent'));
@@ -44,7 +41,6 @@ function show_continent_selector(ndx) {
 }
     
 // Line Chart Showing Dates and Number of Sightings
-
 
 function show_monthly_sightings(ndx) {
     let date_dim = ndx.dimension(dc.pluck('date'));
@@ -68,7 +64,7 @@ function show_monthly_sightings(ndx) {
 
 }
 
-// Select menu showing state selector
+// Select menu showing all US States
 
 function show_state_selector(ndx) {
     let dim = ndx.dimension(dc.pluck('state'));
@@ -79,7 +75,7 @@ function show_state_selector(ndx) {
         .group(group);
 }
 
-// Bar chart showing sightings by US state
+// Bar chart showing sightings by US state versus #sightings
     
 function show_state_sightings(ndx) {
     let state_dim = ndx.dimension(dc.pluck('state'));
@@ -99,6 +95,8 @@ function show_state_sightings(ndx) {
         .xAxisLabel("US States")
         .yAxisLabel("Number of Sightings")
         .renderHorizontalGridLines(true)
+        .colors(d3.scale.ordinal().domain([0, 53])
+            .range(["#1ae851"]))
         .title(function (d) {
                 if (d.value === 1) {
                     return d.value + " sighting was reported in the state of " + d.key;
@@ -111,7 +109,7 @@ function show_state_sightings(ndx) {
 
 }
         
-// Row Chart (continent) data
+// Row Chart showing total continent sightings data
 
 function show_continent(ndx) {
     
@@ -142,12 +140,13 @@ function show_shapes(ndx) {
 
     dc.pieChart("#shapes")
         .height(400)
-        .radius(500)
-        .useViewBoxResizing(true)
+        .radius(300)
+        .useViewBoxResizing(true) // add responsiveness
         .externalRadiusPadding(10)
-        .externalLabels(40)
+        .externalLabels(10)
         .drawPaths(true)
-        .minAngleForLabel(0.2)
+        .minAngleForLabel(0)
+        .cap(10) // too many shapes so requirement to cap is implemented
         .dimension(shape_dim)
         .group(shape_group)
         .transitionDuration(1500);
@@ -193,4 +192,12 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
+}
+
+/*.function to refresh page when Refresh Charts buttons are clicked
+Borrowed from RobSimons Shark project 
+https://robsimons1.github.io/global-white-shark-attack-dashboard/index.html*/
+
+function refreshPage() {
+    window.location.reload();
 }

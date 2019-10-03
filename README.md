@@ -1,11 +1,11 @@
 # UFO sightings worldwide between the dates of 25/8/2016 - 24/8/2017
 
-The data dashboard displays five separate charts which presents accumulated data concerning UFO activity spanning an entire year (until present records permit.)
+The data dashboard displays five separate charts which present accumulated data concerning UFO activity spanning an entire year (until present records permit.)
 It is designed to relay and visually present general behavioural patterns/shapes/frequency and locale of UFO sightings in a bite-sized and easily digestible format, as opposed to the reams of (often inconsistent) data presented in the source excel file.
 
 ## UX
 
-![responsiveness.png](/images/responsiveness.png)
+![responsive.jpg](/images/responsive.jpg)
 
 This site is for UFO enthusiasts, those with an interest in science-fiction and amateur astronomers and sky-gazers.
 The site will primarily be of interest more to a US audience given the high incidence of UFO sightings recorded in the continent of North America.
@@ -21,7 +21,9 @@ The site will primarily be of interest more to a US audience given the high inci
 Initially I was going to display a composite graph near the top of the page, but decided against it because I felt that the parameters
 I would use to display various lines (continents) lacked 'punch' given how few sightings occurred outside of North America.
 
-![wireframe1.png](/images/wireframe1.png)
+![wireframe1.png](/images/snip1.png)
+![wireframe1.png](/images/snip2.png)
+
 
 
 ## Features
@@ -123,15 +125,16 @@ Used for feasibility testing, discussion with mentor, brainstorming ideas and ut
 | Number | Issue            | Resolution   |
 |--------|------------------|--------------|
 |  1  | Overlap w/ pie and legend   | Removed chart (mentor discussion suggested it was a rather redundant item in the dash |
-|  2  | Line chart showing fill between first and last dates  | Added style to remove fill and define line |
+|  2  | Line chart showing fill between first and last dates  | Identified error - not using dc.min.css |
 |  3  | Responsive design  | Introduced Viewbox resizing and bootstrap containers  |
-|  4  | Reset button missing  |   |
-|  5  | Summary  |   |
-|  6  | Additional Resources  |  |
-|  7  | Footer  |   |
-|  8  | Drawn labels 'shape chart'  |  |
-|  9  | Navbar section connect |  |
-|  10 | x-axis Sightings by state far away |  |
+|  4  | Reset button missing  | Introduced several, including on footer  |
+|  5  | Summary  | Written  |
+|  6  | Additional Resources  | Written and link to orig source data |
+|  7  | Footer  | Completed  |
+|  8  | Drawn labels 'shape chart'  | Correctly rendered once dc.min.css was included in script files |
+|  9  | Navbar section connect | Done |
+|  10 | x-axis Sightings by state far away | Decided to keep it |
+|  11 | Sharp Buttons | Using a bootstrap theme which seems to maintain the edge. Not a strong enough requirement for me to warrant change |
 
 ## Deployment
 

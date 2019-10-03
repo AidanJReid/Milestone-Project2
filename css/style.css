@@ -1,35 +1,52 @@
-/*Chart Headings*/
+/*CHART HEADINGS*/
 
 .chart-headings {
-    align-items: center;
+  align-items: center;
 }
 
-.container-blocks {
-    padding: 20px;
+
+/* FOOTER SECTION */
+
+
+
+/*EXCEPTIONAL STYLING*/
+
+p {
+  color: black;
 }
 
-/* footer */
+ul {
+  color: black;
+}
 
-/*Exceptional styling*/
+#NUFORC {
+  font-weight: 900;
+}
 
 #summary-paragraph {
   text-align: left;
 }
 
-/* Navbar */
+/* NAVBAR SECTION */
 
+/* CONTAINER BLOCKS SECTION */
 
-/* Container Blocks Styling */
+#container-open {
+  padding: 20px 20px;
+}
 
 .container-blocks {
   border: 1px solid gray;
+  padding: 20px;
 }
 
-/* Accordion */
+/* ACCORDION SECTION */
 
 .accordion {
   background-color: #1ae851;
-  color: #444;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
   padding: 16px;
   width: 50%;
@@ -40,11 +57,13 @@
 }
 
 /* Button background color when hovered and/or clicked */
-.active, .accordion:hover {
-  background-color: #e8841a;
+
+.active,
+.accordion:hover {
+  background-color: #1ae8aa;
 }
 
-/* Accordion panel. Note: hidden by default */
+/* Accordion panel - note: hidden by default */
 
 .panel {
   padding: 0 18px;
@@ -55,7 +74,8 @@
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: #777;
   float: right;
@@ -63,23 +83,40 @@
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
 }
+
+/* SIGHTINGS BY CONTINENT CHART */
+
+/* SIGHTINGS BY STATE CHART */
 
 /*Rotate state on x-axis to fit*/
 
 #state .axis.x text {
-    transform: rotate(-45deg) translate(-20px, 0px);
+  transform: rotate(-45deg) translate(-20px, 0px);
 }
 
-/* Make text tilt for x-axis on calendar*/
+/* DURATION OF SIGHTINGS CHART */
 
-#line-chart .axis.x text {
-    transform: rotate(-45deg) translate(-40px, 0px);
+#duration .pie-slice {
+  font-size: 16px;
 }
 
-.line {
-    fill: none;
-    stroke: green;
-    stroke-width: 1px;
+
+/* NON-US SIGHTINGS CHART */
+
+.dc-chart g.row text {
+  fill: #000000;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* TABLE */
+
+/*------------------------------------Media queries*/
+
+@media(min-width:320px) and (max-width:640px) {
+
+
 }
