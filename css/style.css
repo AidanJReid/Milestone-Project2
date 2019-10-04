@@ -8,19 +8,18 @@
 /* FOOTER SECTION */
 
 
-
-/*EXCEPTIONAL STYLING*/
+/* EXCEPTIONAL STYLING */
 
 p {
   color: black;
 }
 
-ul {
-  color: black;
+p a {
+  color: blue; /* making distinction that they are links */
 }
 
-#NUFORC {
-  font-weight: 900;
+ul {
+  color: black;
 }
 
 #summary-paragraph {
@@ -38,18 +37,19 @@ ul {
 .container-blocks {
   border: 1px solid gray;
   padding: 20px;
+  margin: 10px;
 }
 
 /* ACCORDION SECTION */
 
 .accordion {
-  background-color: #1ae851;
+  background-color: #1ae851; /* same colour used for coloured bar chart */
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
   padding: 16px;
-  width: 50%;
+  width: 60%;
   text-align: center;
   border: none;
   outline: none;
@@ -60,14 +60,14 @@ ul {
 
 .active,
 .accordion:hover {
-  background-color: #1ae8aa;
+  background-color: #1ae8aa; /* greeny blue */
 }
 
-/* Accordion panel - note: hidden by default */
+/* Accordion panel - note: hidden by default - help via https://www.w3schools.com/howto/howto_js_accordion.asp */
 
 .panel {
   padding: 0 18px;
-  background-color: #f9fad4;
+  background-color: #f9fad4; /* dirty sand colour */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -87,6 +87,10 @@ ul {
   /* Unicode character for "minus" sign (-) */
 }
 
+.panel p {
+  margin-top: 10px;
+}
+
 /* SIGHTINGS BY CONTINENT CHART */
 
 /* SIGHTINGS BY STATE CHART */
@@ -100,23 +104,17 @@ ul {
 /* DURATION OF SIGHTINGS CHART */
 
 #duration .pie-slice {
-  font-size: 16px;
+  font-size: 16px; /* Make text within slice a little more prominent */
 }
 
 
-/* NON-US SIGHTINGS CHART */
+/* GLOBAL SIGHTINGS ROW CHART */
+
+/* making text more prominent */
 
 .dc-chart g.row text {
   fill: #000000;
   font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-}
-
-/* TABLE */
-
-/*------------------------------------Media queries*/
-
-@media(min-width:320px) and (max-width:640px) {
-
-
 }

@@ -29,7 +29,7 @@ function makeGraphs(error, ufoData) {
     dc.renderAll();
 }
 
-// Continent Selector - shows all available continents
+// Continent Selector - shows all available continents in Chart 1 (UFO Sightings by Date)
 
 function show_continent_selector(ndx) {
     let dim = ndx.dimension(dc.pluck('continent'));
@@ -40,7 +40,7 @@ function show_continent_selector(ndx) {
         .group(group);
 }
     
-// Line Chart Showing Dates and Number of Sightings
+// Chart 1 - Line Chart Showing Dates and Number of Sightings
 
 function show_monthly_sightings(ndx) {
     let date_dim = ndx.dimension(dc.pluck('date'));
@@ -53,7 +53,7 @@ function show_monthly_sightings(ndx) {
         .width(1200)
         .height(400)
         .margins({top: 30, right: 50, bottom: 40, left: 50 })
-        .useViewBoxResizing(true)
+        .useViewBoxResizing(true) // add responsiveness
         .dimension(date_dim)
         .group(date_group)
         .transitionDuration(500)
@@ -64,7 +64,31 @@ function show_monthly_sightings(ndx) {
 
 }
 
-// Select menu showing all US States
+// Chart 2 - Row Chart showing continental sightings data
+
+function show_continent(ndx) {
+    
+    let continent_dim = ndx.dimension(dc.pluck('continent'));
+    let continent_group = continent_dim.group();
+    
+    dc.rowChart("#non-us")
+        .height(500)
+        .width(1200)
+        .dimension(continent_dim)
+        .group(continent_group)
+        .useViewBoxResizing(true) // add responsiveness
+        .title(function (d) {
+                if (d.value === 1) {
+                    return d.value + " sightings are in " + d.key;
+                } else {
+                    return d.value + " sightings are in " + d.key;
+                }
+            });
+        
+}
+
+
+// State Selector - shows all available states in Chart 3 (Sightings by State)
 
 function show_state_selector(ndx) {
     let dim = ndx.dimension(dc.pluck('state'));
@@ -75,7 +99,7 @@ function show_state_selector(ndx) {
         .group(group);
 }
 
-// Bar chart showing sightings by US state versus #sightings
+// Chart 3 - Bar chart showing sightings by US state versus no. of sightings
     
 function show_state_sightings(ndx) {
     let state_dim = ndx.dimension(dc.pluck('state'));
@@ -86,7 +110,7 @@ function show_state_sightings(ndx) {
         .width(1200)
         .height(400)
         .margins({ top: 10, right: 60, bottom: 100, left: 60 })
-        .useViewBoxResizing(true)
+        .useViewBoxResizing(true) // add responsiveness
         .dimension(state_dim)
         .group(state_group)
         .transitionDuration(500)
@@ -95,7 +119,7 @@ function show_state_sightings(ndx) {
         .xAxisLabel("US States")
         .yAxisLabel("Number of Sightings")
         .renderHorizontalGridLines(true)
-        .colors(d3.scale.ordinal().domain([0, 53])
+        .colors(d3.scale.ordinal().domain([0, 53]) // same green colour as accordion button
             .range(["#1ae851"]))
         .title(function (d) {
                 if (d.value === 1) {
@@ -108,52 +132,8 @@ function show_state_sightings(ndx) {
         .elasticY(true);
 
 }
-        
-// Row Chart showing total continent sightings data
 
-function show_continent(ndx) {
-    
-    let continent_dim = ndx.dimension(dc.pluck('continent'));
-    let continent_group = continent_dim.group();
-    
-    dc.rowChart("#non-us")
-        .height(500)
-        .width(1200)
-        .dimension(continent_dim)
-        .group(continent_group)
-        .useViewBoxResizing(true)
-        .title(function (d) {
-                if (d.value === 1) {
-                    return d.value + " sightings are in " + d.key;
-                } else {
-                    return d.value + " sightings are in " + d.key;
-                }
-            });
-        
-}
-
-// Shapes Pie Chart data
-
-function show_shapes(ndx) {
-    let shape_dim = ndx.dimension(dc.pluck('shape'));
-    let shape_group = shape_dim.group();
-
-    dc.pieChart("#shapes")
-        .height(400)
-        .radius(300)
-        .useViewBoxResizing(true) // add responsiveness
-        .externalRadiusPadding(10)
-        .externalLabels(10)
-        .drawPaths(true)
-        .minAngleForLabel(0)
-        .cap(10) // too many shapes so requirement to cap is implemented
-        .dimension(shape_dim)
-        .group(shape_group)
-        .transitionDuration(1500);
-        
-}
-
-// States Pie Chart data
+// Chart 4 - Duration Pie Chart data
 
 function show_duration(ndx) {
     let duration_dim = ndx.dimension(dc.pluck('timeRange'));
@@ -162,8 +142,8 @@ function show_duration(ndx) {
     dc.pieChart("#duration")
         .height(400)
         .radius(500)
-        .useViewBoxResizing(true)
-        .innerRadius(60)
+        .useViewBoxResizing(true) // adds responsiveness
+        .innerRadius(60) // create donut hole
         .dimension(duration_dim)
         .group(duration_group)
         .transitionDuration(1500)
@@ -177,7 +157,29 @@ function show_duration(ndx) {
         
 }
 
-// Accordion for Read More (top of page)
+// Chart 5 - Shapes Pie Chart data
+
+function show_shapes(ndx) {
+    let shape_dim = ndx.dimension(dc.pluck('shape'));
+    let shape_group = shape_dim.group();
+
+    dc.pieChart("#shapes")
+        .height(400)
+        .radius(200)
+        .useViewBoxResizing(true) // add responsiveness
+        .externalRadiusPadding(20) // allow text to be fully shown (especially on mobile)
+        .externalLabels(10)
+        .drawPaths(true)
+        .minAngleForLabel(0) // label all segments
+        .cap(10) // too many shapes so requirement to cap is implemented
+        .dimension(shape_dim)
+        .group(shape_group)
+        .transitionDuration(1500);
+
+}
+
+
+// Accordion for Read More (top of page - help via https://www.w3schools.com/howto/howto_js_accordion.asp)
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -194,8 +196,8 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-/*.function to refresh page when Refresh Charts buttons are clicked
-Borrowed from RobSimons Shark project 
+/* function to refresh page when Refresh Charts buttons are clicked
+Inspired by RobSimons Shark project 
 https://robsimons1.github.io/global-white-shark-attack-dashboard/index.html*/
 
 function refreshPage() {
