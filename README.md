@@ -10,11 +10,11 @@ It is designed to relay and visually present general behavioural patterns/shapes
 This site is for UFO enthusiasts, those with an interest in science-fiction and amateur astronomers and sky-gazers.
 The site will primarily be of interest more to a US audience given the high incidence of UFO sightings recorded in the continent of North America.
 
-1. <b>User story 1</b>: As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity
-2. <b>User story 2</b>: As a hobbyist with an interest in sky-gazing (potentially as amateur astronomer) who has observed strange lights in the sky at night.
-3. <b>User story 3</b>: As a science fiction afficionado and casual reader in things occulted and other-worldly.
-4. <b>User story 4</b>: As a researcher or journalist with an interest in documenting and understanding unexplained phenomenon or patterns in human behaviour.
-5. <b>User story 5</b>: Meteorological, aircraft or military personnel who have seen oddities in the sky at night and use the charts as corroboration or to cross-check their own findings.
+1. **User story 1**: As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity
+2. **User story 2**: As a hobbyist with an interest in sky-gazing (potentially as amateur astronomer) who has observed strange lights in the sky at night.
+3. **User story 3**: As a science fiction afficionado and casual reader in things occulted and other-worldly.
+4. **User story 4**: As a researcher or journalist with an interest in documenting and understanding unexplained phenomenon or patterns in human behaviour.
+5. **User story 5**: Meteorological, aircraft or military personnel who have seen oddities in the sky at night and use the charts as corroboration or to cross-check their own findings.
 
 ### Wireframes
 
@@ -32,13 +32,13 @@ Initial wireframes were created using Balsamiq for desktop and are as follows:
 ### Existing features
 
 ##### Navbar
-- A bootswatch (based on Bootstrap 4.3.1) theme was used for navbar styling.
-- Sticky navbar which makes navigation better for the user, especially on mobile.
+- A **bootswatch theme** (based on Bootstrap 4.3.1) was used for navbar styling.
+- **Sticky navbar** which makes navigation better for the user, especially on mobile.
 - Containing navigation items from left to right:
-  *  Home - Links back to the top of the page.
-  *  Summary - Links to the Summary section of the page.
-  *  Resources - Links to the Additional Resources section of the page.
-  *  Reset Charts - Allows user to reset the selections made in charts where they have clicked either through the menu dropdown, a segment of pie chart or bar chart.
+  *  **Home** - Links back to the top of the page.
+  *  **Summary** - Links to the Summary section of the page.
+  *  **Resources** - Links to the Additional Resources section of the page.
+  *  **Reset Charts** - Allows user to reset the selections made in charts where they have clicked either through the menu dropdown, a segment of pie chart or bar chart.
 
 
 ##### Accordion/Read More
@@ -47,8 +47,8 @@ Initial wireframes were created using Balsamiq for desktop and are as follows:
 
 ##### UFO Sightings by Date line chart
 - Displays all the sightings in the aforementioned year. 
-- Can be filtered by continent by clicking the select menu.
-- Reset button introduced (uses Javascript) and configured to enhance user experience.
+- **Continent Dropdown selector** - allows user to select continent.
+- **Reset button** introduced (uses Javascript) and configured to enhance user experience.
 
 ##### Global Sightings row chart
 - Shows number of sightings as broken down by continent. 
@@ -57,8 +57,8 @@ Initial wireframes were created using Balsamiq for desktop and are as follows:
 ##### Sightings by State bar chart
 - Visually representing all 52 states and the number of sightings.
 - This includes a 53rd state (XX) and accounts for sightings outside of the recognised US states, e.g. Europe.
-- Reset button provided to improve user experience.
-- Select menu which gives user ability to toggle between States. Alternatively the respective bar(s) can be selected/deselected.
+- **Reset button** provided to improve user experience.
+- **State Dropdown selector** - allows user to select US State. Alternatively the respective bar(s) can be selected/deselected.
 
 ##### Pie Charts - Duration of UFO Sightings | Shapes of UFOs
 - Segment(s) of pie charts can be clicked upon and are interactive impacting on readability of subsequent charts. 
@@ -83,11 +83,11 @@ It is my intention to create this in the near-future, colour coding US states wi
 
 ## Technologies Used
 
-##### HTML5
+#### HTML5
 This code was used to structure the page, place charts and provide accompanying text to charts, accordion, Resources and Additional Resource sections. 
 It also featured in the nav and footer sections of the page.
 
-##### CSS3
+#### CSS3
 This code was used to add style to the HTML specifications (namely container sections - leaning on the Bootstrap grid layout). 
 CSS changes were made throughout the project in order to enhance the look and feel of the site, including chart styling (x-axis, pie charts) .
 
@@ -97,37 +97,37 @@ Used Lux, built on the theme of Bootstrap, as primary skin for buttons, theme an
 #### Bootstrap 4
 Used for the grid layout to ensure responsive site.
 
-##### JavaScript 
+#### JavaScript 
 JS was used to queue my charts, create select menus, reset buttons, creation of the accordion and providing additional functionality on the page.
 
-##### Crossfilter
+#### Crossfilter
 Used to provide interactivity between charts (line, bar, pie) enabling and improving user interaction with the raw data presented in visual format.
 
-##### D3.js
+#### D3.js
 Library used to create charts and connect data together with the help of HTML ids.
 
-##### DC.js
+#### DC.js
 Library used for crossfilter, interactivity and styling of graphs.
 
-##### jQuery
+#### jQuery
 Used for the hamburger drop down menu on mobile.
 
-##### Data.world
+#### Data.world
 The original dataset used was by Tim Renner at [Data.World](https://data.world/timothyrenner/ufo-sightings).
 I extracted a year's worth of relevant data for the purposes of this project. With the original file being over 130mg and dating back to the 1960's I felt
 that one year would be adequate and would provide the necessary insight to present a compelling story that fulfilled the project's purpose.
 
-##### CSV and JSON
+#### CSV and JSON
 I added various JSON files primarily to compare/contrast data sources and act as a guide as I cleaned up the data. 
 Dealing with a relatively large dataset and various inconsistencies in certain fields, prompted me to create smaller datasets to test for feasibility.
 
-##### AWSCloud9
+#### AWSCloud9
 I used Cloud 9 of AWS Educate, Cloud 9 to create this project which enabled me to connect and push to Github when needed.
 
-##### Git and GitHub
+#### Git and GitHub
 Used to store code in a remote repository, hosting and for successful deployment of site.
 
-##### Balsamiq desktop
+#### Balsamiq desktop
 Used at the conception of the project idea for feasibility testing, discussion with mentor, brainstorming ideas and ultimately to create mockups of the project.
 
 
@@ -135,18 +135,18 @@ Used at the conception of the project idea for feasibility testing, discussion w
 
 #### User Stories
 
-Thorough testing for each scenario:
+Thorough testing for each user scenario:
 
-1. As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity
+- *As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity*
   * Shared site with a friend who lives in Boston and who has an interest in UFO activity. 
   * They were able to use Chart 1 to drill into sightings for North America, use Chart 2 to compare continents, use Chart 3 and drill into their state (MA) and see impacting changes relayed on pie charts 4 and 5.
-2. As a hobbyist with an interest in sky-gazing (potentially as amateur astronomer) who has observed strange lights in the sky at night.
+- *As a hobbyist with an interest in sky-gazing (potentially as amateur astronomer) who has observed strange lights in the sky at night.*
   * Volunteered myself for this scenario. Was able to navigate fully and identify key patterns about UFO phenomenon globally, which was neatly collected in the summary section.
-3. As a science fiction afficionado and casual reader in things occulted and other-worldly.
+- *As a science fiction afficionado and casual reader in things occulted and other-worldly.*
   * Shared with a colleague who had a broad interest in the subject. Successfully navigated site to his satisfaction, rendering all charts.
-4. As a researcher or journalist with an interest in documenting and understanding unexplained phenomenon or patterns in human behaviour.
+- *As a researcher or journalist with an interest in documenting and understanding unexplained phenomenon or patterns in human behaviour.*
   * Broad scope of the project covered with project purpose clearly defined, linked to raw data (via addtional resources section).
-5. Meteorological, aircraft or military personnel who have seen oddities in the sky at night and use the charts as corroboration or to cross-check their own findings.
+- *Meteorological, aircraft or military personnel who have seen oddities in the sky at night and use the charts as corroboration or to cross-check their own findings.*
   * Charts can be manipulated by user to display information that relate to their query (geo location, shape, duration of sightings).
 
 #### General
@@ -213,11 +213,11 @@ The following steps were taken:
 
 ### Media
 
-* Responsiveness and device images image from [Responsive Design](http://ami.responsivedesign.is/)
+* Responsiveness and device images from [Responsive Design](http://ami.responsivedesign.is/)
 
 ### Acknowledgements
 
-* Inspiration from [Rob Simons](https://robsimons1.github.io/global-white-shark-attack-dashboard/) - pie chart ideas and layout
-* Inspiration from [Aileen Donegan](https://adonegan.github.io/milestone2-dashboard/stats.html) - general layout and a kick-ass README!
-* Inspiration from [Dano5324](https://github.com/dano5342/LotRDashboard) - namely the x-axis value tilt for my 52 states.
-* Thanks to my Code Institute mentor Brian Macharia for his helpful advice and support as ever!
+* Inspiration from [Rob Simons](https://robsimons1.github.io/global-white-shark-attack-dashboard/) - *pie chart ideas and layout*
+* Inspiration from [Aileen Donegan](https://adonegan.github.io/milestone2-dashboard/stats.html) - *general layout and a kick-ass README!*
+* Inspiration from [Dano5324](https://github.com/dano5342/LotRDashboard) - *namely the x-axis value tilt for my 52 states.*
+* *Thanks to my Code Institute mentor Brian Macharia for his helpful advice and support as ever!*
