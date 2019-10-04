@@ -11,8 +11,8 @@ It is designed to relay and visually present general behavioural patterns, shape
 This site is for UFO enthusiasts, those with an interest in science-fiction and amateur astronomers and sky-gazers.
 The site will primarily be of interest more to a US audience given the high incidence of UFO sightings recorded in the continent of North America.
 
-1. **User story 1**: As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity
-2. **User story 2**: As a hobbyist with an interest in sky-gazing (potentially as amateur astronomer) who has observed strange lights in the sky at night.
+1. **User story 1**: As a UFO enthusiast who is interested in the incidences of sightings (or lack thereof) in my vicinity.
+2. **User story 2**: As a hobbyist with an interest in sky-gazing (potentially as an amateur astronomer) who has observed strange lights in the sky at night.
 3. **User story 3**: As a science fiction afficionado and casual reader in things occulted and other-worldly.
 4. **User story 4**: As a researcher or journalist with an interest in documenting and understanding unexplained phenomenon or patterns in human behaviour.
 5. **User story 5**: Meteorological, aircraft or military personnel who have seen oddities in the sky at night and use the charts as corroboration or to cross-check their own findings.
@@ -22,7 +22,7 @@ The site will primarily be of interest more to a US audience given the high inci
 Initially I was going to display a composite graph near the top of the page, but decided against it because I felt that the parameters
 I would use to display various lines (continents) lacked 'punch' given how few sightings occurred outside of North America.
 
-Initial wireframes were created using Balsamiq for desktop and are as follows:
+Initial wireframes were created using **Balsamiq for desktop**:
 
 ![snip1.jpg](assets/images/snip1.jpg)
 ![snip1.jpg](assets/images/snip2.jpg)
@@ -39,7 +39,7 @@ Initial wireframes were created using Balsamiq for desktop and are as follows:
   *  **Home** - Links back to the top of the page.
   *  **Summary** - Links to the Summary section of the page.
   *  **Resources** - Links to the Additional Resources section of the page.
-  *  **Reset Charts** - Allows user to reset the selections made in charts where they have clicked either through the menu dropdown, a segment of pie chart or bar chart.
+  *  **Reset Charts** - A prominent bold button which allows user to reset the selections made in charts where they have clicked either through the menu dropdown, a segment of pie chart or bar chart.
 
 
 ##### Accordion/Read More
@@ -125,7 +125,7 @@ I added various JSON files primarily to compare/contrast data sources and act as
 Dealing with a relatively large dataset and various inconsistencies in certain fields, prompted me to create smaller datasets to test for feasibility.
 
 #### AWSCloud9
-I used Cloud 9 of AWS Educate, Cloud 9 to create this project which enabled me to connect and push to Github when needed.
+I used AWS Educate, Cloud 9 to create this project which enabled me to connect and push to Github when needed.
 
 #### Git and GitHub
 Used to store code in a remote repository, hosting and for successful deployment of site.
@@ -168,10 +168,10 @@ To test responsiveness, the following mobiles were tested Galaxy S5, Pixel 2, Pi
 #### Navigation
 
 * Rigorous testing was applied on the following features:
-- Hover over pie charts, bar, row charts and line graphs to ensure desktop users could see data.
-- Bars (on bar chart), segments (of pie charts), points (on line graph) all tested and confirmed and passing tests on desktop and mobile.
-- Interactivity between charts tested.
-- Reset buttons tested (on navbar, footer and those accompanying graphs)
+  - Hover over pie charts, bar, row charts and line graphs to ensure desktop users could see data.
+  - Bars (on bar chart), segments (of pie charts), points (on line graph) all tested and passing tests on desktop and mobile.
+  - Interactivity between charts tested as elements on charts (both singular and multiple options) selected.
+  - Reset buttons tested (on navbar, footer and those accompanying graphs)
 
 JQuery was added to help with the drop down for mobile users and tested on the mobile devices listed in the previous (General) section.
 
