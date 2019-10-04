@@ -165,6 +165,10 @@ Bootstrap (Bootswatch) - and the respective grid layout - was used to make it as
 **Responsive/Mobile-first design** was tested using Chrome developer tools to ensure desired layout was achieved. As well as Chrome, I also used Safari (12.0) and Firefox (68.0.2) which collectively successfully affirmed my project's responsiveness.
 To test responsiveness, the following mobiles were tested Galaxy S5, Pixel 2, Pixel 2 XL, iPhone 5/SE 6/7/8 Plus X, iPad and iPad Pro. All successfully passed in mobile responsiveness of the page.
 
+[HTML Checker](https://validator.w3.org/) conducted and passed.
+
+![HTML Tester](/assets/images/htmlchecker.jpg)
+
 #### Navigation
 
 * Rigorous testing was applied on the following features:
