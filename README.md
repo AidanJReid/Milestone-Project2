@@ -2,7 +2,7 @@
 
 The data dashboard displays five separate charts which present accumulated data concerning UFO activity spanning an entire year (until present records permit.)
 
-It is designed to relay and visually present general behavioural patterns, shapes. frequency and locale of UFO sightings in a bite-sized and easily digestible format, as opposed to the reams of data presented in the source excel file.
+It is designed to relay and visually present general behavioural patterns, shapes, frequency and locale of UFO sightings in a bite-sized and easily digestible format, as opposed to the reams of data presented in the source excel file.
 
 ## UX
 
@@ -63,6 +63,8 @@ Initial wireframes were created using Balsamiq for desktop and are as follows:
 
 ##### Pie Charts - Duration of UFO Sightings | Shapes of UFOs
 - Segment(s) of pie charts can be clicked upon and are interactive impacting on readability of subsequent charts. 
+* Duration | Data categorised by range (e.g. <1 minute, 1-5 minutes, 6 - 10 minutes...) because of the wide variance in times reported.
+* Shapes | Capped at 10 shapes, and broadly categorised to present a more consistent picture.
 - Hovering over segments will also reveal data.
 
 ##### Summary | Additional Resources sections
@@ -160,21 +162,22 @@ The raw data that was used presented a number of headaches, namely because the d
 
 Bootstrap (Bootswatch) - and the respective grid layout - was used to make it as easy as easy as possible to render responsive on various screen sizes.
 
-Chrome developer tools was my go-to to ensure desired layout was achieved. As well as Chrome, I also used Safari (12.0) and Firefox (68.0.2) which collectively successfully affirmed my project's responsiveness.
+**Responsive/Mobile-first design** was tested using Chrome developer tools to ensure desired layout was achieved. As well as Chrome, I also used Safari (12.0) and Firefox (68.0.2) which collectively successfully affirmed my project's responsiveness.
 To test responsiveness, the following mobiles were tested Galaxy S5, Pixel 2, Pixel 2 XL, iPhone 5/SE 6/7/8 Plus X, iPad and iPad Pro. All successfully passed in mobile responsiveness of the page.
 
 #### Navigation
 
-JQuery was added to help with the drop down for mobile users.
+* Rigorous testing was applied on the following features:
+- Hover over pie charts, bar, row charts and line graphs to ensure desktop users could see data.
+- Bars (on bar chart), segments (of pie charts), points (on line graph) all tested and confirmed and passing tests on desktop and mobile.
+- Interactivity between charts tested.
+- Reset buttons tested (on navbar, footer and those accompanying graphs)
+
+JQuery was added to help with the drop down for mobile users and tested on the mobile devices listed in the previous (General) section.
 
 Several elements in the navigation bar enabled users to access certain parts of the site for short cuts. A Reset Charts button was added to delete current/historical selections.
 
 All the above features were tested both by myself, my Code Institute mentor and several family and friends - both on mobile and desktop - with no record of failure.
-
-#### Charts
-
-All charts were tested and were both rendering data successfully, and interacted with other charts.
-My mentor, Brian Macharia, myself and several friends tested the above on desktop and mobile.
 
 #### Issues
 
@@ -184,7 +187,7 @@ My mentor, Brian Macharia, myself and several friends tested the above on deskto
 |  1  | Overlap w/ pie and legend   | Removed composite chart (mentor discussion suggested it was a rather redundant item in the dash |
 |  2  | Line chart showing fill between first and last dates  | Identified error - not using dc.min.css |
 |  3  | Responsive design  | Introduced Viewbox resizing and bootstrap containers  |
-|  4  | Reset button missing  | Introduced several - on navbar, footer and on charts 1 and 3  |
+|  4  | No way to reset data  | Introduced several reset buttons - on navbar, footer and on charts 1 and 3  |
 |  5  | Summary missing | Written  |
 |  6  | Additional Resources missing | Written and link to orig source data |
 |  7  | Footer width restricted | Corrected container block  |
@@ -211,11 +214,11 @@ The following steps were taken:
 ### Content
 
 * UFO data from [Data.world](https://data.world/timothyrenner/ufo-sightings)
-* UFO favicon by [Pixel Buddha](https://www.flaticon.com/authors/pixel-buddha)
 
 ### Media
 
 * Responsiveness and device images from [Responsive Design](http://ami.responsivedesign.is/)
+* UFO favicon by [Pixel Buddha](https://www.flaticon.com/authors/pixel-buddha)
 
 ### Acknowledgements
 
