@@ -1,7 +1,8 @@
 # UFO sightings worldwide between the dates of 25/8/2016 - 24/8/2017
 
 The data dashboard displays five separate charts which present accumulated data concerning UFO activity spanning an entire year (until present records permit.)
-It is designed to relay and visually present general behavioural patterns/shapes/frequency and locale of UFO sightings in a bite-sized and easily digestible format, as opposed to the reams of (often inconsistent) data presented in the source excel file.
+
+It is designed to relay and visually present general behavioural patterns, shapes. frequency and locale of UFO sightings in a bite-sized and easily digestible format, as opposed to the reams of data presented in the source excel file.
 
 ## UX
 
@@ -210,6 +211,7 @@ The following steps were taken:
 ### Content
 
 * UFO data from [Data.world](https://data.world/timothyrenner/ufo-sightings)
+* UFO favicon by [Pixel Buddha](https://www.flaticon.com/authors/pixel-buddha)
 
 ### Media
 
