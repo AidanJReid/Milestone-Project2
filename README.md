@@ -68,7 +68,7 @@ Initial wireframes were created using **Balsamiq for desktop**:
 - Hovering over segments will also reveal data.
 
 ##### Summary | Additional Resources sections
-- Simple HTML & CSS used.
+- Simple [HTML](https://www.scaler.com/topics/html/) & CSS used.
 - These sections are connected to the nav bar where users can quickly navigate to the section in question.
 - Additional Resources links to two separate sites (in a new window) where users can access the raw data and/or visit the UFO website.
 
